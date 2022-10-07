@@ -217,8 +217,9 @@
               In other words, this step rejects if the [=associated
               `Document`=]'s [=browsing context=]'s [=active document=]'s
               [=origin=] is not [=same origin-domain=] with the [=origin=] of
-              the [=current settings object=] of this {{Navigator}} object,
+              the [=current principal settings object=] of this {{Navigator}} object,
               unless specifically allowed by the document's permissions policy.
+              <!-- FIXME: this note makes no sense. -->
             </div>
           </li>
           <li>Otherwise:
@@ -510,7 +511,7 @@
           slot |slot|, a |value| and an |eventName|, run the following steps:
         </p>
         <ol class="algorithm">
-          <li>Let |global| be the [=current global object=].
+          <li>Let |global| be the [=current principal global object=].
           </li>
           <li>If |global| is not a {{Window}}, abort these steps.
           </li>
